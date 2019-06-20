@@ -1,16 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { MDXProvider } from "@mdx-js/tag";
 import styled, { ThemeProvider } from "styled-components";
-import { ThemeContext } from "../globalState/index";
 
 import { A, H1, P } from "./mdx";
 
-import { light_theme, dark_theme } from "../styles/theme";
-// import { GlobalStyles } from "../styles/styles";
-// import { GatsbyHighlightStyles } from "../styles/gatsby-highlight-styles";
-
-// import Header from "./header";
-// import Footer from "./footer";
+import { light_theme } from "../styles/theme";
 
 const Main = styled.main`
   margin: 0 auto;
@@ -40,12 +34,11 @@ const mdxComponents = {
 };
 
 export default ({ site, frontmatter = {}, children }) => {
-  //   const { useDarkTheme } = useContext(ThemeContext);
   return (
-    <MDXProvider components={mdxComponents}>
-      {/* <GlobalStyles />
-        <GatsbyHighlightStyles /> */}
-      <Main>{children}</Main>
-    </MDXProvider>
+    <ThemeProvider theme={light_theme}>
+      <MDXProvider components={mdxComponents}>
+        <Main>{children}</Main>
+      </MDXProvider>
+    </ThemeProvider>
   );
 };
