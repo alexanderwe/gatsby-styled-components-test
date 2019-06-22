@@ -10,4 +10,4 @@ yarn workspace site server
 
 to see the issue:
 
-The css is loaded slightly after the page has loaded causing a weird behavior.
+The css is loaded slightly after the page has loaded causing a weird behavior. Maybe reload some times to see the flickering of the text.
