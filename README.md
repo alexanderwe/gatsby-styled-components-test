@@ -5,7 +5,7 @@ Run
 ```sh
 yarn install
 # and then
-yarn workspace site server
+yarn workspace site serve
 ```
 
 to see the issue:
