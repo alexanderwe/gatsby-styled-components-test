@@ -5,6 +5,8 @@ const Wrapper = styled.div`
   font-size: 32pt;
   color: black;
   margin-left: 200px;
+  background: green;
+  width: 100px;
 `;
 
 export default () => (
